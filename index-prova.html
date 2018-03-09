@@ -1,20 +1,16 @@
-<!doctype html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8">
-    <title>A-Frame DAE</title>
-    <meta name="description" content="">
-    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
-  <a-assets>
-    <a-asset-item id="tree" src="scene/tree2.dae"></a-asset-item>
-  </a-assets>
-
-  <!-- Using the asset management system. -->
-  <a-collada-model src="#tree"></a-collada-model>
-
-</a-scene>
+      <a-assets>
+        <a-asset-item id="tree" src="scene/tree2.dae"></a-asset-item>
+      </a-assets>
+       <a-collada-model src="#tree"></a-collada-model>
+     
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
   </body>
 </html>
