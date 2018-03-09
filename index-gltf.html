@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="tree" src="scene/room/scene.gltf">
+      </a-assets>
+
+       <a-gltf-model src="#tree"></a-gltf-model>
+       <!--<a-collada-model position="-3.258 0 -1.989" src="#tree" collada-model="scene/tree2.dae"></a-collada-model>-->
+     
+       <a-plane position="-3 -0.078 -1" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" material="" geometry=""></a-plane>
+      <a-sky color="#ECECEC" position="-3.079 0 -1.102" material="" geometry=""></a-sky>
+    </a-scene>
+  </body>
+</html>
+
