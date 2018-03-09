@@ -1,3 +1,4 @@
-# Tecnologia utilizzata: A-Frame https://aframe.io/docs/0.8.0/introduction/
+## Tecnologia utilizzata: A-Frame
+<p>https://aframe.io/docs/0.8.0/introduction/</p>
 
-## I file accettatiper i models sono il .dae .obj .gltf (consigliato)
+<p>I file accettati per i models sono il .dae .obj .gltf (consigliato)</p>
