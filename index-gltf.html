@@ -8,12 +8,17 @@
         <a-asset-item id="tree" src="scene/room/scene.gltf">
       </a-assets>
 
+      <script>document.querySelector('#model').addEventListener('model-loaded', function() {
+console.log('loaded');
+});</script>
+
        <a-gltf-model src="#tree"></a-gltf-model>
        <!--<a-collada-model position="-3.258 0 -1.989" src="#tree" collada-model="scene/tree2.dae"></a-collada-model>-->
      
        <a-plane position="-3 -0.078 -1" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" material="" geometry=""></a-plane>
       <a-sky color="#ECECEC" position="-3.079 0 -1.102" material="" geometry=""></a-sky>
+       <a-entity id="cursor-loader" position="0 0 -2.0001"  geometry="primitive: ring; radiusOuter: 0.06; radiusInner: 0.03;"  material="color: #2ADD2A;"
+    >
     </a-scene>
   </body>
 </html>
-
