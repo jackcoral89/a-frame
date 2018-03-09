@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <title>A-Frame DAE</title>
     <meta name="description" content="">
-    <script src="https://aframe.io/releases/latest/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-camera id="camera" position="0 1 0">
-      </a-camera>
+  <a-assets>
+    <a-asset-item id="tree" src="scene/tree2.dae"></a-asset-item>
+  </a-assets>
 
-      <!-- Model -->
-      <a-entity id="model">
-        <a-model src="http://wafi.iit.cnr.it/smartarea/data/cnr.dae"></a-model>
-      </a-entity>
-    </a-scene>
+  <!-- Using the asset management system. -->
+  <a-collada-model src="#tree"></a-collada-model>
+
+</a-scene>
   </body>
 </html>
