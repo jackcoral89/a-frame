@@ -3,14 +3,20 @@
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene>
-      <a-camera id="camera" position="0 1 0">
-      </a-camera>
-
-      <!-- Model -->
-      <a-entity id="model">
-        <a-model src="http://wafi.iit.cnr.it/smartarea/data/cnr.dae"></a-model>
-      </a-entity>
+    <a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="300" height="150"></canvas>
+      <a-assets>
+        <!--<a-asset-item position="0 1.25 -5" id="chicken-obj" src="scene/house.obj"></a-asset-item>-->
+        <a-asset-item id="house" src="scene/house.dae"></a-asset-item>
+        <!--<a-asset-item id="chicken-mtl" src="scene/house.obj"></a-asset-item>-->
+        
+    </a-assets>
+    <!--<a-entity obj-model="obj:scene/house.obj;mtl:scene/house.obj" position="0 0 -3" rotation="0 -180 0"></a-entity>-->
+    <a-collada-model src="#house"></a-collada-model>
+    <a-collada-model src="house.dae"></a-collada-model>
+    <!--<a-plane color="#ccc" height="20" width="20" rotation="-90 0 0" material="" geometry="">
+    </a-plane>-->
+     
+      <a-sky color="#ECECEC"></a-sky>
     </a-scene>
   </body>
 </html>
