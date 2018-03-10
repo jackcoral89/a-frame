@@ -1,0 +1,63 @@
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <!-- Bootstrap Bootswatch theme CSS - other themes available here: https://bootswatch.com -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Bootstrap JS Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- A-Frame JS Dependencies -->    
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/gladeye/aframe-preloader-component/1.0.0/dist/aframe-preloader-component.min.js"></script>
+
+	
+  </head>
+  <body>
+  	<div id="preloader-modal" class="modal instructions-modal" tabindex="-1" role="dialog" style="display: none;">
+	  <div class="modal-dialog modal-dialog__full" role="document">
+	    <div class="modal-content vertical-align text-center">
+	      <div class="col-md-6 col-md-offset-3">
+	        <div class="row">
+	          <div class="col-xs-12">
+	            <i class="preloader-modal__ok fa fa-check fa-5x text-success" aria-hidden="true"></i>
+	            <i class="preloader-modal__spinner fa fa-cog fa-spin fa-5x fa-fw text-muted" aria-hidden="true"></i>
+	          </div>
+	        </div>
+	        <div class="row">
+	          <div class="col-xs-12">
+	            <span class="progress-label">Loading 0%</span>
+	          </div>
+	        </div>
+	        <div class="row">
+	          <div class="col-xs-12">
+	            <button type="button" class="btn btn-default clearfix" data-dismiss="modal">Start</button>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<a-scene preloader="autoInject: false; clickToClose: true; autoClose: true; target: #preloader-modal; bar: #preloader-modal .progress-bar; label: #preloader-modal .progress-label; labelText: Loading {0}%; slowLoad: true; doneLabelText: Press Start To Play!;">
+      <a-assets>
+        <a-asset-item id="tree" src="scene/room/scene.gltf" preload="auto"></a-asset-item>
+         <img id="ground-texture" src="https://cdn.aframe.io/a-painter/images/floor.jpg" crossorigin="anonymous" preload="auto">
+    	 <img id="sky-texture" src="https://cdn.aframe.io/a-painter/images/sky.jpg" crossorigin="anonymous" preload="auto">
+      </a-assets>
+
+       <a-gltf-model id="model" src="#tree" position="0 0 0"></a-gltf-model>
+       <!--<a-collada-model position="-3.258 0 -1.989" src="#tree" collada-model="scene/tree2.dae"></a-collada-model>-->
+        
+        <a-plane src="#ground-texture" rotation="-90 0 0" position="0 -3.5 0" height="100" width="100"></a-plane>
+		<a-sky height="2048" radius="30" src="#sky-texture" theta-length="90" width="2048"></a-sky>
+		<a-entity light="color:#BBB;type:ambient;intensity:2" data-aframe-default-light="" aframe-injected=""></a-entity>
+		<a-entity camera="active:false" wasd-controls="" position="-8.355 5.649 -4.133" rotation="-1.6042818263663068 -19.938931270552647 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
+		<a-entity light="intensity:2;castShadow:true;angle:80" position="-0.5 4.46 1" data-aframe-default-light="" aframe-injected=""></a-entity>
+    </a-scene>
+  </body>
+</html>
+
